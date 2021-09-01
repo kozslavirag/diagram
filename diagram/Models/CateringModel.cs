@@ -10,20 +10,20 @@ namespace diagram.Models
     [DataContract]
     public class CateringModel
     {
-        public CateringModel(int Date, int SalesVolume)
+        public CateringModel(int x, int y)
         {
-            this.Date = Date;
-            this.SalesVolume = SalesVolume;
+            this.x = x;
+            this.Y = y;
 
         }
         //private readonly DataContext _context;
 
 
-        [DataMember(Name = "Date")]
-        public Nullable<int> Date = null;
+        [DataMember(Name = "x")]
+        public Nullable<int> x = null;
 
-        [DataMember(Name = "SalesVolume")]
-        public Nullable<int> SalesVolume = null;
+        [DataMember(Name = "y")]
+        public Nullable<int> Y = null;
 
 
 
