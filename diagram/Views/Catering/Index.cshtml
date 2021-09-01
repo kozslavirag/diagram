@@ -17,7 +17,8 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		text: ""
 	},
 	axisX: {
-		valueFormatString: "DD MMM"
+        titleFontFamily: "comic sans ms",
+		/*interval: 10*/
 	},
 	axisY: {
 		title: "Eladási forgalom",
@@ -25,10 +26,8 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	},
 	data: [{
 		type: "spline",
-		xValueType: "dateTime",
-		xValueFormatString: "DD MMM",
 		yValueFormatString: "$#,###",
-        cateringDataToChart: @Html.Raw(ViewBag.CateringModels)
+        dataPoints: @Html.Raw(ViewBag.CateringModels)
 	}]
 });
 chart.render();

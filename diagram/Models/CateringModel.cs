@@ -10,11 +10,11 @@ namespace diagram.Models
     [DataContract]
     public class CateringModel
     {
-        public CateringModel(int x, int y)
+        public CateringModel(int x, int y, string label)
         {
             this.x = x;
             this.Y = y;
-
+            this.label = label;
         }
         //private readonly DataContext _context;
 
@@ -25,7 +25,8 @@ namespace diagram.Models
         [DataMember(Name = "y")]
         public Nullable<int> Y = null;
 
-
+        [DataMember(Name = "label")]
+        public string label = "";
 
     }
 }

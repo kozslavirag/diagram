@@ -16,11 +16,11 @@ namespace diagram.Controllers
         {
             List<CateringModel> cateringDataToChart = new List<CateringModel>();
 
-            cateringDataToChart.Add(new CateringModel(1546300800, 91180));
-            cateringDataToChart.Add(new CateringModel(1548979200, 22548));
-            cateringDataToChart.Add(new CateringModel(1551398400, 87456));
-            cateringDataToChart.Add(new CateringModel(1554076800, 45879));
-            cateringDataToChart.Add(new CateringModel(1556668800, 11254));
+            cateringDataToChart.Add(new CateringModel(1, 91180, new DateTime(2021, 1,1).ToString("yyyy.MM.dd")));
+            cateringDataToChart.Add(new CateringModel(2, 22548, new DateTime(2021, 2, 1).ToString("yyyy.MM.dd")));
+            cateringDataToChart.Add(new CateringModel(3, 87456, new DateTime(2021, 3, 1).ToString("yyyy.MM.dd")));
+            cateringDataToChart.Add(new CateringModel(4, 45879, new DateTime(2021, 4, 1).ToString("yyyy.MM.dd")));
+            cateringDataToChart.Add(new CateringModel(5, 11254, new DateTime(2021, 5, 1).ToString("yyyy.MM.dd")));
             ViewBag.CateringModels = JsonConvert.SerializeObject(cateringDataToChart);
             return View();
         }
